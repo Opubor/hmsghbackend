@@ -226,7 +226,7 @@ const BlooddonorValidator = Joi.object({
   bags: Joi.string()
     .max(200)
     .required()
-    .messages({ "string.empty": "Number of bags is required" }),
+    .messages({ "string.empty": "required" }),
   lastdonationdate: Joi.string()
     .max(200)
     .required()
@@ -249,10 +249,10 @@ const DischargebloodValidator = Joi.object({
     .max(200)
     .required()
     .messages({ "string.empty": "Blood group is required" }),
-  bags: Joi.number()
+  bags: Joi.string()
     .max(200)
     .required()
-    .messages({ "string.empty": "Number of bags is required" }),
+    .messages({ "string.empty": "required" }),
   charges: Joi.string()
     .max(200)
     .required()
